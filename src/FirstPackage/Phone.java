@@ -1,7 +1,10 @@
-package FirstPackage;
+package firstpackage;
 
 public class Phone {
-  private int id = 1, nomer, localCall, distanceCall;
+  private int id = 1;
+  private int nomer;
+  private int localCall;
+  private int distanceCall;
   private String name;
 
   public String getName() {
@@ -44,7 +47,7 @@ public class Phone {
     this.name = nam;
   }
 
-  public void toString(Phone[] objArr, int len, int check) {
+  public void output(Phone[] objArr, int len, int check) {
     for (int i = 0; i < len; i++) {
       if (check == i + 1) {
         System.out.println(objArr[i].getId());
@@ -55,5 +58,11 @@ public class Phone {
         System.out.println();
       }
     }
+  }
+
+  @Override
+  public String toString() {
+    return this.id + " " + this.name + " " + this.nomer + " " + this.localCall + " minutes " + this.distanceCall
+        + " minutes";
   }
 }
